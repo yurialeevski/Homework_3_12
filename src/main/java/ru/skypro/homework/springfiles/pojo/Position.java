@@ -16,6 +16,11 @@ public class Position {
     public Position() {
     }
 
+    public Position(Integer id, String role) {
+        this.id = id;
+        this.role = role;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -31,4 +36,29 @@ public class Position {
     public void setRole(String role) {
         this.role = role;
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "id=" + id +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }
+/*#################################################################
+@Entity
+@Table(name = "position")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class Position {
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Integer id;
+
+        private String name;
+
+}
+ #################################################################*/
